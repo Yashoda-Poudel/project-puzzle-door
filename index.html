@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puzzle Room</title>
+</head>
+<body>
+<link rel="stylesheet" href="css/style.css"> 
+<div id="landing" class="screen active">
+  <nav>
+    <a class="logo" href="#home"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="5" y="2" width="24" height="30" rx="3" fill="#f5c26b"/><rect x="9" y="6" width="16" height="22" rx="2" fill="#100d0b"/><circle cx="21" cy="18" r="2" fill="#f5c26b"/></svg>Four Doors</a>
+    <div class="links">
+      <a class="nl" href="#home">Home</a>
+      <a class="nl" href="#about">About Us</a>
+      <a class="nl" href="#contact">Contact Us</a>
+      <button id="navPlay">Play Now</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="big">🚪</div>
+    <h1>Escape the Four Rooms</h1>
+    <p>You wake up locked inside a strange old house. Search every room, collect items, crack the codes and solve the riddles. Four rooms stand between you and freedom. Can you get out?</p>
+    <button id="playBtn" class="go">▶ Play Now</button>
+    <p id="best"></p>
+  </header>
+
+  <section class="sec" id="about">
+    <h2>About Us</h2>
+    <p>Four Doors is a small browser puzzle game built with plain HTML, CSS and JavaScript. No downloads, no sign-up: open the page and start escaping. Every room is a chain of clues, so look closely and think about how the objects connect.</p>
+    <div class="cards">
+      <div class="card"><span></span><b>4 Rooms</b>Library, Clock Room, Dark Cellar and the Final Vault.</div>
+      <div class="card"><span></span><b>Varied Puzzles</b>Riddles, ciphers, color orders, item use and a dial lock.</div>
+      <div class="card"><span></span><b>Hints</b>Stuck? Each room has three hints. Fewer hints earn more stars.</div>
+      <div class="card"><span>⏱</span><b>Beat the Clock</b>Your time is tracked, so try to improve your best run.</div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="contact"><div>
+    <h2>Contact Us</h2>
+    <p> Send us a message.</p>
+    <form id="cform">
+      <input id="cname" placeholder="Your name" required>
+      <input id="cmail" type="email" placeholder="Your email" required>
+      <textarea id="cmsg" rows="4" placeholder="Your message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="cthanks" style="color:#f5c26b"></p>
+  </div></section>
+
+  
+</div>
+
+<div id="game" class="screen">
+  <div id="hud">
+    <h2 id="roomTitle"></h2>
+    <span><span class="pill" id="timer"> 0:00</span> <button class="ghost" id="hintBtn"> Hint</button></span>
+  </div>
+
+
+  <div id="room"><div id="dark"></div><div id="fade"></div></div>
+  <div id="message"></div>
+  <div id="bar">
+    <div id="inv"></div>
+    <div id="notes"></div>
+  </div>
+</div>
+
+<div id="win" class="screen">
+  <div class="big"></div>
+  <h1>You Escaped!</h1>
+  <div class="stars" id="stars"></div>
+  <p id="stats"></p>
+  <button id="againBtn">↻ Play Again</button>
+</div>
+
+<div id="modal"><div class="box">
+  <h3 id="mTitle"></h3>
+  <div id="mBody"></div>
+  <button class="ghost" id="mClose" style="margin-top:8px">Close</button>
+
+  <footer>© 2026 Four Doors. All rights reserved.</footer>
+</div></div>
